@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Recipe Finder</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+    <h3>🔥 Healthy Recipe Finder</h3>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#recipes">Recipes</a>
+    </nav>
+
+    <a href="#recipes" class="btn">Browse recipes</a>
+</header>
+
+<!-- HOME SECTION -->
+<section class="hero" id="home">
+    <h1><span>Healthy meals,</span> zero fuss</h1>
+
+    <p>
+        Discover eight quick, whole-food recipes that you can
+        cook tonight—no processed junk, no guesswork.
+    </p>
+
+    <a href="#recipes" class="btn">Start exploring</a>
+
+    <img
+        src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80"
+        alt="Woman preparing healthy food">
+</section>
+
+<!-- BENEFITS SECTION -->
+<section class="benefits section" id="about">
+
+    <h2>What you'll get</h2>
+
+    <div class="benefit-container">
+
+        <div>
+            <span class="icon">🥜</span>
+            <h3>Whole-food recipes</h3>
+            <p>Each dish uses everyday, unprocessed ingredients.</p>
+        </div>
+
+        <div>
+            <span class="icon">⚡</span>
+            <h3>Minimum fuss</h3>
+            <p>All recipes are designed to make eating healthy quick and easy.</p>
+        </div>
+
+        <div>
+            <span class="icon">🔎</span>
+            <h3>Search in seconds</h3>
+            <p>Find recipes by name or ingredient in seconds.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="life section">
+
+    <div>
+        <h2>Built for real life</h2>
+
+        <p>
+            Cooking shouldn't be complicated. These recipes
+            come in under 30 minutes of active time, fit busy
+            schedules, and taste good enough to repeat.
+        </p>
+
+        <p>
+            Whether you're new to the kitchen or just need
+            fresh ideas, we've got you covered.
+        </p>
+    </div>
+
+    <img
+        src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?auto=format&fit=crop&w=1000&q=80"
+        alt="Preparing fresh vegetables">
+
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="cta">
+
+    <h2>Ready to cook smarter?</h2>
+
+    <p>
+        Hit the button, pick a recipe, and get dinner
+        on the table—fast.
+    </p>
+
+    <a href="#recipes" class="btn">Browse recipes</a>
+
+</section>
+
+<!-- RECIPES SECTION -->
+<section id="recipes" class="section">
+
+    <div class="recipe-heading">
+        <h1>Explore our simple, healthy recipes</h1>
+
+        <p>
+            Discover eight quick, whole-food dishes that fit
+            real-life schedules and taste amazing.
+        </p>
+    </div>
+
+    <div class="filters">
+
+        <select id="prepFilter">
+            <option value="all">Max Prep Time</option>
+            <option value="5">5 minutes</option>
+            <option value="10">10 minutes</option>
+        </select>
+
+        <select id="cookFilter">
+            <option value="all">Max Cook Time</option>
+            <option value="0">No cooking</option>
+            <option value="10">10 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="20">20 minutes</option>
+        </select>
+
+        <input
+            type="search"
+            id="search"
+            placeholder="🔎 Search by name or ingredient...">
+
+    </div>
+
+    <div class="recipe-container">
+
+        <!-- RECIPE 1 -->
+        <div class="recipe-card"
+             data-name="Mediterranean Chickpea Salad"
+             data-ingredients="chickpea tomato cucumber lemon"
+             data-prep="10" data-cook="0">
+
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80"
+                 alt="Chickpea salad">
+
+            <h3>Mediterranean Chickpea Salad</h3>
+
+            <p>A refreshing, protein-packed salad tossed in lemon-olive oil dressing.</p>
+
+            <small>♟ Servings: 2 | ◷ Prep: 10 mins</small>
+            <small>♨ Cook: 0 min</small>
+
+            <button onclick="showRecipe(0)">View Recipe</button>
+        </div>
+
+        <!-- RECIPE 2 -->
+        <div class="recipe-card"
+             data-name="Avocado Tomato Wholegrain Toast"
+             data-ingredients="avocado tomato bread lemon"
+             data-prep="5" data-cook="5">
+
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=700&q=80"
+                 alt="Avocado toast">
+
+            <h3>Avocado &amp; Tomato Wholegrain Toast</h3>
+
+            <p>Creamy avocado spread over toasted wholegrain bread with juicy tomatoes.</p>
+
+            <small>♟ Servings: 1 | ◷ Prep: 5 mins</small>
+            <small>♨ Cook: 5 mins</small>
+
+            <button onclick="showRecipe(1)">View Recipe</button>
+        </div>
+
+        <!-- RECIPE 3 -->
+        <div class="recipe-card"
+             data-name="Lemon Garlic Salmon"
+             data-ingredients="salmon lemon garlic asparagus"
+             data-prep="5" data-cook="12">
+
+            <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=700&q=80"
+                 alt="Salmon meal">
+
+            <h3>One-Pan Lemon Garlic Salmon</h3>
+
+            <p>A quick dinner of flaky salmon and tender asparagus.</p>
+
+            <small>♟ Servings: 2 | ◷ Prep: 5 mins</small>
+            <small>♨ Cook: 12 mins</small>
+
+            <button onclick="showRecipe(2)">View Recipe</button>
+        </div>
+
+        <!-- RECIPE 4 -->
+        <div class="recipe-card"
+             data-name="Quinoa Veggie Power Bowl"
+             data-ingredients="quinoa sweet potato spinach avocado chickpea"
+             data-prep="10" data-cook="15">
+
+            <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=700&q=80"
+                 alt="Vegetable power bowl">
+
+            <h3>Quinoa Veggie Power Bowl</h3>
+
+            <p>A balanced bowl of quinoa, roasted vegetables and healthy fats.</p>
+
+            <small>♟ Servings: 2 | ◷ Prep: 10 mins</small>
+            <small>♨ Cook: 15 mins</small>
+
+            <button onclick="showRecipe(3)">View Recipe</button>
+        </div>
+
+        <!-- RECIPE 5 -->
+        <div class="recipe-card"
+             data-name="Sweet Potato Black Bean Tacos"
+             data-ingredients="sweet potato black beans tortillas lime"
+             data-prep="10" data-cook="15">
+
+            <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=700&q=80"
+                 alt="Tacos">
+
+            <h3>Sweet Potato Black Bean Tacos</h3>
+
+            <p>Smoky roasted sweet potatoes and black beans in warm tortillas.</p>
+
+            <small>♟ Servings: 3 | ◷ Prep: 10 mins</small>
+            <small>♨ Cook: 15 mins</small>
+
+            <button onclick="showRecipe(4)">View Recipe</button>
+        </div>
+
+        <!-- RECIPE 6 -->
+        <div class="recipe-card"
+             data-name="Greek Yogurt Berry Parfait"
+             data-ingredients="yogurt berries blueberries oats honey"
+             data-prep="5" data-cook="0">
+
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80"
+                 alt="Yogurt and berries">
+
+            <h3>Greek Yogurt Berry Parfait</h3>
+
+            <p>Creamy yogurt, fresh berries and crunchy oats for a healthy snack.</p>
+
+            <small>♟ Servings: 1 | ◷ Prep: 5 mins</small>
+            <small>♨ Cook: 0 min</small>
+
+            <button onclick="showRecipe(5)">View Recipe</button>
+        </div>
+
+        <!-- RECIPE 7 -->
+        <div class="recipe-card"
+             data-name="Lentil Spinach Soup"
+             data-ingredients="lentils spinach tomatoes onion garlic"
+             data-prep="10" data-cook="20">
+
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                 alt="Lentil soup">
+
+            <h3>Lentil &amp; Spinach Soup</h3>
+
+            <p>A hearty soup rich in plant protein and iron.</p>
+
+            <small>♟ Servings: 4 | ◷ Prep: 10 mins</small>
+            <small>♨ Cook: 20 mins</small>
+
+            <button onclick="showRecipe(6)">View Recipe</button>
+        </div>
+
+        <!-- RECIPE 8 -->
+        <div class="recipe-card"
+             data-name="Banana Oat Pancakes"
+             data-ingredients="banana oats eggs berries"
+             data-prep="5" data-cook="10">
+
+            <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=700&q=80"
+                 alt="Banana pancakes">
+
+            <h3>Banana Oat Pancakes</h3>
+
+            <p>Flour-free pancakes naturally sweetened with ripe bananas.</p>
+
+            <small>♟ Servings: 2 | ◷ Prep: 5 mins</small>
+            <small>♨ Cook: 10 mins</small>
+
+            <button onclick="showRecipe(7)">View Recipe</button>
+        </div>
+
+    </div>
+
+    <div id="recipeDetails" class="recipe-details"></div>
+
+</section>
+
+<footer>
+    <p>Made with ❤️ and 🥑</p>
+    <p>◎ &nbsp; ♥ &nbsp; ♪</p>
+</footer>
+
+<script>
+const recipes = [
+    {
+        name: "Mediterranean Chickpea Salad",
+        ingredients: "Chickpeas, tomatoes, cucumber, olive oil, lemon juice and parsley.",
+        steps: "1. Mix the chickpeas, tomatoes and cucumber. 2. Add olive oil and lemon juice. 3. Season and serve."
+    },
+    {
+        name: "Avocado & Tomato Wholegrain Toast",
+        ingredients: "Wholegrain bread, avocado, tomato and lemon juice.",
+        steps: "1. Toast the bread. 2. Mash the avocado with lemon juice. 3. Spread on the bread and add tomato."
+    },
+    {
+        name: "One-Pan Lemon Garlic Salmon",
+        ingredients: "Salmon, asparagus, lemon, garlic and olive oil.",
+        steps: "1. Place the salmon and asparagus on a baking tray. 2. Add lemon, garlic and olive oil. 3. Bake at 200°C until the salmon is cooked."
+    },
+    {
+        name: "Quinoa Veggie Power Bowl",
+        ingredients: "Quinoa, sweet potato, chickpeas, spinach and avocado.",
+        steps: "1. Cook the quinoa. 2. Roast the sweet potato. 3. Combine with chickpeas, spinach and avocado."
+    },
+    {
+        name: "Sweet Potato Black Bean Tacos",
+        ingredients: "Sweet potatoes, black beans, tortillas and lime.",
+        steps: "1. Roast the sweet potatoes. 2. Warm the beans and tortillas. 3. Fill the tortillas and add lime."
+    },
+    {
+        name: "Greek Yogurt Berry Parfait",
+        ingredients: "Greek yogurt, berries, oats and honey.",
+        steps: "1. Add yogurt to a glass. 2. Layer with berries and oats. 3. Add honey if desired."
+    },
+    {
+        name: "Lentil & Spinach Soup",
+        ingredients: "Lentils, spinach, tomatoes, onion and garlic.",
+        steps: "1. Cook the onion and garlic. 2. Add tomatoes, lentils and stock. 3. Simmer and stir in spinach."
+    },
+    {
+        name: "Banana Oat Pancakes",
+        ingredients: "Banana, oats, eggs and berries.",
+        steps: "1. Blend banana, oats and eggs. 2. Cook small portions in a pan. 3. Serve with berries."
+    }
+];
+
+function showRecipe(index) {
+    const recipe = recipes[index];
+    const box = document.getElementById("recipeDetails");
+
+    box.innerHTML = `
+        <button onclick="closeRecipe()">Close ✕</button>
+        <h2>${recipe.name}</h2>
+        <h3>Ingredients</h3>
+        <p>${recipe.ingredients}</p>
+        <h3>Instructions</h3>
+        <p>${recipe.steps}</p>
+    `;
+
+    box.style.display = "block";
+    box.scrollIntoView({ behavior: "smooth" });
+}
+
+function closeRecipe() {
+    document.getElementById("recipeDetails").style.display = "none";
+}
+
+function filterRecipes() {
+    const search = document.getElementById("search").value.toLowerCase();
+    const prep = document.getElementById("prepFilter").value;
+    const cook = document.getElementById("cookFilter").value;
+
+    document.querySelectorAll(".recipe-card").forEach(card => {
+        const text = (
+            card.dataset.name + " " + card.dataset.ingredients
+        ).toLowerCase();
+
+        const matchesSearch = text.includes(search);
+        const matchesPrep = prep === "all" ||
+            Number(card.dataset.prep) <= Number(prep);
+        const matchesCook = cook === "all" ||
+            Number(card.dataset.cook) <= Number(cook);
+
+        card.style.display =
+            matchesSearch && matchesPrep && matchesCook ? "flex" : "none";
+    });
+}
+
+document.getElementById("search").addEventListener("input", filterRecipes);
+document.getElementById("prepFilter").addEventListener("change", filterRecipes);
+document.getElementById("cookFilter").addEventListener("change", filterRecipes);
+</script>
+
+</body>
+</html>
